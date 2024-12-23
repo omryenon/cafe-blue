@@ -4,6 +4,7 @@ import AboutUs from "./components/AboutUs";
 import Renovation from "./components/Renovation";
 import CoffeeInfo from "./components/CoffeeInfo";
 import Footer from "./components/Footer";
+import ImageCarousel from "./components/ImageCarousel";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Header />
       <AboutUs />
       <Renovation />
+      <ImageCarousel />
       <CoffeeInfo />
       <Footer />
     </div>

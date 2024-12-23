@@ -1,0 +1,18 @@
+.image-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 300px;   /* Image width */
+  height: 400px;  /* Image height */
+  margin-right: 50px; /* Gap between images */
+}
