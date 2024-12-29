@@ -1,11 +1,14 @@
 .header {
-    background-color: #1e3a8a;
-    color: #fff;
-    padding: 50px;
+  margin-top: -10px;
+    padding-bottom: 50px;
     text-align: center;
+    background-color: #ffffff;
   
-    .headerTitle {
-      font-size: 3rem;
+    .header-title {
+      font-family: cursive;
+      color: #404142;
+      margin-top: -50px !important;
+      font-size: 20px;
       margin: 0;
     }
   }  
