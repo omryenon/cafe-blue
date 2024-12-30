@@ -36,7 +36,7 @@ const ImageCarousel: React.FC = () => {
     const container = containerRef.current;
 
     if (container) {
-      const singleImageWidth = 200; // Image width in pixels
+      const singleImageWidth = 220; // Image width in pixels
       const gap = 50; // Gap between images
       const numImages = images.length;
       const totalWidth = (singleImageWidth + gap) * numImages;
