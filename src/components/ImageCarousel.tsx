@@ -12,6 +12,8 @@ import image6 from "../assets/open-cafe-blue-6.jpg";
 import image7 from "../assets/open-cafe-blue-7.jpg";
 import image8 from "../assets/open-cafe-blue-8.jpg";
 import image9 from "../assets/open-cafe-blue-9.jpg";
+import image10 from "../assets/open-cafe-blue-10.jpg";
+import image11 from "../assets/open-cafe-blue-11.jpg";
 
 const images = [
   image1,
@@ -23,6 +25,8 @@ const images = [
   image7,
   image8,
   image9,
+  image10,
+  image11,
 ];
 
 const ImageCarousel: React.FC = () => {
@@ -40,7 +44,7 @@ const ImageCarousel: React.FC = () => {
       // GSAP infinite scrolling
       gsap.to(container, {
         x: `-=${totalWidth}px`, // Move left by total width
-        duration: 30, // Adjust speed as needed
+        duration: 60, // Adjust speed as needed
         ease: "linear",
         repeat: -1, // Infinite loop
         modifiers: {

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import "./AboutUs.scss";
+import fb from "../assets/facebook.svg";
+import ins from "../assets/instgram.svg";
 
 const AboutUs: React.FC = () => {
   useEffect(() => {
@@ -13,8 +15,12 @@ const AboutUs: React.FC = () => {
 
   return (
     <section className="about-us">
-      <h2>About Us</h2>
-      <p>Yonatan Gabay and Matan Rachman</p>
+    <a href="https://www.instagram.com/cafeblue.jaffa/" target="_blank" rel="noopener noreferrer">
+      <img src={ins} alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/p/Caf%C3%A9-Blue-61559556535364/?_rdr" target="_blank" rel="noopener noreferrer">
+      <img src={fb} alt="Facebook" />
+    </a>
     </section>
   );
 };

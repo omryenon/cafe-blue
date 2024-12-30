@@ -11,10 +11,10 @@ const App: React.FC = () => {
     <div>
       <Header />
       <ImageCarousel />
-      {/* <AboutUs />
-      <Renovation />
-      <CoffeeInfo />
-      <Footer /> */}
+      <AboutUs />
+      {/* <Renovation /> */}
+      {/* <CoffeeInfo /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

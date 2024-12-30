@@ -16,11 +16,9 @@ const Header: React.FC = () => {
     <header className="header">
       <img src={logo}></img>
       <div className="header-title">
-        <p>Nestled within the vibrant Jaffa Port,</p> 
-        <p>Café Blue serves as a welcoming haven for both locals and travelers.</p>
-        <p>With a carefully curated selection of specialty coffees,</p> 
-        <p>complemented by delectable pastries and light bites,</p>
-        <p>every detail is crafted to perfection.</p>
+        <p>Nestled within the vibrant Jaffa Port, </p> 
+        <p>Café Blue is a cozy spot for locals and visitors. With specialty</p>
+        <p>and delicious pastries, every detail is crafted to perfection.</p>
         <p>Oh... and the coffee? Simply exceptional!</p>
       </div>
     </header>
