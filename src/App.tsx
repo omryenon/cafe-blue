@@ -6,6 +6,7 @@ import CoffeeInfo from "./components/CoffeeInfo";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import MoreInfo from "./components/MoreInfo";
+import Menu from "./components/Menu";
 
 import "./App.scss";
 
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <ImageCarousel />
       <AboutUs />
       <MoreInfo />
+      <Menu />
       {/* <Renovation /> */}
       {/* <CoffeeInfo /> */}
       {/* <Footer /> */}
