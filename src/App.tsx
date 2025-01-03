@@ -5,13 +5,17 @@ import Renovation from "./components/Renovation";
 import CoffeeInfo from "./components/CoffeeInfo";
 import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
+import MoreInfo from "./components/MoreInfo";
+
+import "./App.scss";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div >
       <Header />
       <ImageCarousel />
       <AboutUs />
+      <MoreInfo />
       {/* <Renovation /> */}
       {/* <CoffeeInfo /> */}
       {/* <Footer /> */}
