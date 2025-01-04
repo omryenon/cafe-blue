@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ImageCarousel from "./components/ImageCarousel";
 import MoreInfo from "./components/MoreInfo";
 import Menu from "./components/Menu";
+import Phone from "./components/Phone";
 
 import "./App.scss";
 
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <AboutUs />
       <MoreInfo />
       <Menu />
+      <Phone />
       {/* <Renovation /> */}
       {/* <CoffeeInfo /> */}
       {/* <Footer /> */}
