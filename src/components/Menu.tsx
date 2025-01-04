@@ -8,10 +8,12 @@ const Menu: React.FC = () => {
   const [zoomLevel, setZoomLevel] = useState(0.35);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Open or close the menu on button click
   const handleMenuClick = () => {
     setIsMenuOpen((prevState) => !prevState);
+    setImageLoaded(false);
   };
 
   // Zoom in
@@ -21,7 +23,7 @@ const Menu: React.FC = () => {
 
   // Zoom out
   const handleZoomOut = () => {
-    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.05, 0.2)); // Limit zoom to 0.5x
+    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.05, 0.25)); // Limit zoom to 0.5x
   };
 
   // Close the menu
@@ -57,20 +59,23 @@ const Menu: React.FC = () => {
               src={menu}
               alt="Menu"
               className="menu-image"
+              onLoad={() => setImageLoaded(true)}
               style={{ transform: `scale(${zoomLevel})` }}
             />
-            <div className="zoom-controls">
-            <button className="close-button" onClick={handleClose}>
-                X
-              </button>
-              <button className="zoom-button" onClick={handleZoomOut}>
-                -
-              </button>
-              <button className="zoom-button" onClick={handleZoomIn}>
-                +
-              </button>
-              
-            </div>
+            {imageLoaded && (
+              <div className="zoom-controls">
+              <button className="close-button" onClick={handleClose}>
+                  X
+                </button>
+                <button className="zoom-button" onClick={handleZoomOut}>
+                  -
+                </button>
+                <button className="zoom-button" onClick={handleZoomIn}>
+                  +
+                </button>
+                
+              </div>
+            )}
           </div>
         </div>
       )}
