@@ -30,9 +30,8 @@ const Menu: React.FC = () => {
     setZoomLevel(0.35);
   };
 
-  // Close the menu if clicked outside the image or buttons
   const handleClickOutside = (e: MouseEvent) => {
-    if (overlayRef.current && !overlayRef.current.contains(e.target as Node)) {
+    if (!["IMG", "BUTTON"].includes((e.target as HTMLElement).tagName)) {
       handleClose();
     }
   };
@@ -61,15 +60,16 @@ const Menu: React.FC = () => {
               style={{ transform: `scale(${zoomLevel})` }}
             />
             <div className="zoom-controls">
+            <button className="close-button" onClick={handleClose}>
+                X
+              </button>
               <button className="zoom-button" onClick={handleZoomOut}>
                 -
               </button>
               <button className="zoom-button" onClick={handleZoomIn}>
                 +
               </button>
-              <button className="close-button" onClick={handleClose}>
-                X
-              </button>
+              
             </div>
           </div>
         </div>
