@@ -16,10 +16,12 @@ const Phone: React.FC = () => {
   }, []);
 
   return (
-    <div className="phone-container" ref={phoneRef}>
-      <a href="tel:+972545742762" className="phone-number">
-        📞 +972 54-574-2762
-      </a>
+    <div style={{display: "flex", justifyContent: "center"}}>
+      <div className="phone-container" ref={phoneRef}>
+        <a href="tel:+972545742762" className="phone-number">
+          📞 +972 54-574-2762
+        </a>
+      </div>
     </div>
   );
 };

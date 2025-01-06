@@ -8,6 +8,7 @@ import ImageCarousel from "./components/ImageCarousel";
 import MoreInfo from "./components/MoreInfo";
 import Menu from "./components/Menu";
 import Phone from "./components/Phone";
+import Map from "./components/Map";
 
 import "./App.scss";
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <MoreInfo />
       <Menu />
       <Phone />
+      <Map />
       {/* <Renovation /> */}
       {/* <CoffeeInfo /> */}
       {/* <Footer /> */}
