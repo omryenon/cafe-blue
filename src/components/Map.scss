@@ -1,16 +1,25 @@
 .map-container {
-    height: 500px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    border: 2px solid #0074D9;
-    border-radius: 10px;
-    overflow: hidden;
-  
-    iframe {
-      border-radius: 10px;
-    }
-  }
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border: 2px solid #0074D9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+iframe {
+  border-radius: 10px;
+}
+.map-fallback {
+  border-radius: 10px;
+}
+
+.address {
+  font-family: cursive;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
   
