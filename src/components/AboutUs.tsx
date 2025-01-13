@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import gsap from "gsap";
 import "./AboutUs.scss";
 import fb from "../assets/facebook.svg";
 import ins from "../assets/instgram.svg";
+import { DeviceContext } from "../App";
 
 const AboutUs: React.FC = () => {
+
+  const { isMobile } = useContext(DeviceContext);
   useEffect(() => {
     gsap.fromTo(
       ".about-us",

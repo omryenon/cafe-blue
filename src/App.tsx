@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, createContext, useContext } from 'react';
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
 import Renovation from "./components/Renovation";
@@ -12,9 +12,25 @@ import Map from "./components/Map";
 
 import "./App.scss";
 
+export const DeviceContext = createContext({ isMobile: false });
+const detectMobile = () => {
+  return window.innerWidth <= 768;
+};
+
 const App: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(detectMobile());
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(detectMobile());
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   return (
-    <div >
+    <DeviceContext.Provider value={ {isMobile}}>
       <Header />
       <ImageCarousel />
       <AboutUs />
@@ -25,7 +41,7 @@ const App: React.FC = () => {
       {/* <Renovation /> */}
       {/* <CoffeeInfo /> */}
       {/* <Footer /> */}
-    </div>
+    </DeviceContext.Provider>
   );
 };
 
