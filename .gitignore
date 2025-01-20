@@ -1,0 +1,8 @@
+# Ignore Webpack and build cache files
+*.pack
+*.json
+.cache/
+node_modules/
+build/
+dist/
+*.log
