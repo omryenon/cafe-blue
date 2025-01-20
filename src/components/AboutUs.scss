@@ -6,4 +6,17 @@
   top: 30px;
   left: 30px;
 }
-  
+
+.mobile-about-us {
+  @extend .about-us;
+  gap: unset;
+  flex-direction: column;
+}
+
+.svg-style {
+  transform: scale(1);
+}
+
+.mobile-svg-style {
+  transform: scale(0.7);
+}

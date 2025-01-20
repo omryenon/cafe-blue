@@ -31,9 +31,9 @@ const App: React.FC = () => {
   
   return (
     <DeviceContext.Provider value={ {isMobile}}>
+      <AboutUs />
       <Header />
       <ImageCarousel />
-      <AboutUs />
       <MoreInfo />
       <Menu />
       <Phone />

@@ -11,4 +11,9 @@
     font-size: 20px;
     margin: 0;
   }
+
+  .mobile-header-title {
+    @extend .header-title;
+    font-size: 15px;
+  }
 }  
