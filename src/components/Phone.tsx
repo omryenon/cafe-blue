@@ -1,8 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./Phone.scss";
 import { gsap } from "gsap";
+import { DeviceContext } from "../App";
 
 const Phone: React.FC = () => {
+
+  const { isMobile } = useContext(DeviceContext);
   const phoneRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -17,8 +20,8 @@ const Phone: React.FC = () => {
 
   return (
     <div style={{display: "flex", justifyContent: "center"}}>
-      <div className="phone-container" ref={phoneRef}>
-        <a href="tel:+972545742762" className="phone-number">
+      <div className="phone-container" ref={phoneRef} style={{padding: isMobile ? '12px' : '20px'}}>
+        <a href="tel:+972545742762" className="phone-number" style={{fontSize: isMobile ? '16px' : '24px'}}>
           📞 +972 54-574-2762
         </a>
       </div>
