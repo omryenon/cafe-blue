@@ -5,7 +5,7 @@ import { DeviceContext } from "../App";
 const MoreInfo: React.FC = () => {
   const { isMobile } = useContext(DeviceContext);
   return (
-    <div className="more-info">
+    <div className={isMobile ? "mobile-more-info" : "more-info"}>
       <div className="hours">
         {!isMobile && (<h1>Opening Hours</h1>) }
         {isMobile && (<h2>Opening Hours</h2>) }
