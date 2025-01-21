@@ -1,11 +1,15 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import "./Menu.scss";
-import menu from "../assets/menu.jpg"
+import menu from "../assets/menu.jpg";
+import { DeviceContext } from "../App";
+
 
 
 const Menu: React.FC = () => {
+  const { isMobile } = useContext(DeviceContext);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(0.35);
+  const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.15 : 0.35);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -18,18 +22,18 @@ const Menu: React.FC = () => {
 
   // Zoom in
   const handleZoomIn = () => {
-    setZoomLevel((prevZoom) => Math.min(prevZoom + 0.05, 0.5)); // Limit zoom to 2x
+    setZoomLevel((prevZoom) => Math.min(prevZoom + 0.05, isMobile ? 0.3 : 0.5)); // Limit zoom to 2x
   };
 
   // Zoom out
   const handleZoomOut = () => {
-    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.05, 0.25)); // Limit zoom to 0.5x
+    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.05, isMobile ? 0.10 : 0.25)); // Limit zoom to 0.5x
   };
 
   // Close the menu
   const handleClose = () => {
     setIsMenuOpen(false);
-    setZoomLevel(0.35);
+    setZoomLevel(isMobile ? 0.15 : 0.35);
   };
 
   const handleClickOutside = (e: MouseEvent) => {
@@ -63,7 +67,7 @@ const Menu: React.FC = () => {
               style={{ transform: `scale(${zoomLevel})` }}
             />
             {imageLoaded && (
-              <div className="zoom-controls">
+              <div className="zoom-controls" style={{right: isMobile ? '0px' : '200px'}}>
               <button className="close-button" onClick={handleClose}>
                   X
                 </button>
