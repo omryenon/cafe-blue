@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cafe-blue/static/css/main.91570a23.css",
-    "main.js": "/cafe-blue/static/js/main.3deb74d7.js",
+    "main.css": "/cafe-blue/static/css/main.e96b7589.css",
+    "main.js": "/cafe-blue/static/js/main.bca3bbd0.js",
     "static/media/open-cafe-blue-5.jpg": "/cafe-blue/static/media/open-cafe-blue-5.de5153a334adcd8181be.jpg",
     "static/media/open-cafe-blue-11.jpg": "/cafe-blue/static/media/open-cafe-blue-11.2c81fbbc94ea239d8245.jpg",
     "static/media/menu.jpg": "/cafe-blue/static/media/menu.838b28cdc88a2d18a95a.jpg",
@@ -19,11 +19,11 @@
     "index.html": "/cafe-blue/index.html",
     "static/media/instgram.svg": "/cafe-blue/static/media/instgram.4af1a43c34d843abc74ee2e328c657b0.svg",
     "static/media/facebook.svg": "/cafe-blue/static/media/facebook.98041716237ba4e82906ca5ee1d06485.svg",
-    "main.91570a23.css.map": "/cafe-blue/static/css/main.91570a23.css.map",
-    "main.3deb74d7.js.map": "/cafe-blue/static/js/main.3deb74d7.js.map"
+    "main.e96b7589.css.map": "/cafe-blue/static/css/main.e96b7589.css.map",
+    "main.bca3bbd0.js.map": "/cafe-blue/static/js/main.bca3bbd0.js.map"
   },
   "entrypoints": [
-    "static/css/main.91570a23.css",
-    "static/js/main.3deb74d7.js"
+    "static/css/main.e96b7589.css",
+    "static/js/main.bca3bbd0.js"
   ]
 }
