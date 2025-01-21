@@ -11,8 +11,8 @@
 }
 .mobile-map-container {
   @extend .map-container;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
 }
 iframe {
   border-radius: 10px;
@@ -22,9 +22,11 @@ iframe {
 }
 
 .address {
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 19px;
   margin-top: 20px;
   display: flex;
+  color: #404142;
   justify-content: center;
 }
   

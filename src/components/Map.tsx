@@ -16,7 +16,7 @@ const Map: React.FC = () => {
   return (
     <>
       <div className="address">Jaffa port 3, Tel Aviv-Yafo</div>
-      <div className={isMobile ? "mobile-map-container" : "map-container"} style={{height: mapFailed ? 'unset' : isMobile ? '400px' : '500px'}}>
+      <div className={isMobile ? "mobile-map-container" : "map-container"} style={{height: mapFailed ? 'unset' : isMobile ? '350px' : '500px'}}>
         {mapFailed ? (
           <img
             src={img}
@@ -26,8 +26,8 @@ const Map: React.FC = () => {
         ) : (
         <iframe
           src={cafeBlueLocation}
-          width={isMobile ? "400px" : "500px"}
-          height={isMobile ? "400px" : "500px"}
+          width={isMobile ? "350px" : "500px"}
+          height={isMobile ? "350px" : "500px"}
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"

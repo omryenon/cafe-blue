@@ -30,8 +30,8 @@ const Header: React.FC = () => {
         <div className="mobile-header-title">
           <p>Nestled within the vibrant Jaffa Port, </p> 
           <p>Café Blue is a cozy spot for locals and visitors.</p>
-          <p>With specialty and delicious pastries, every detail is</p>
-          <p>crafted to perfection. Oh... and the coffee?</p>
+          <p>With specialty and delicious pastries, every detail</p>
+          <p>is crafted to perfection. Oh... and the coffee?</p>
           <p>Simply exceptional!</p>
         </div>
       )}

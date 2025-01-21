@@ -9,8 +9,8 @@
 
 .mobile-about-us {
   @extend .about-us;
-  top: 5px;
-  left: 5px;
+  top: 15px;
+  left: 15px;
   gap: unset;
   flex-direction: column;
 }
@@ -20,5 +20,5 @@
 }
 
 .mobile-svg-style {
-  transform: scale(0.7);
+  transform: scale(0.75);
 }

@@ -9,7 +9,7 @@ const Menu: React.FC = () => {
   const { isMobile } = useContext(DeviceContext);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.15 : 0.35);
+  const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.20 : 0.35);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -33,7 +33,7 @@ const Menu: React.FC = () => {
   // Close the menu
   const handleClose = () => {
     setIsMenuOpen(false);
-    setZoomLevel(isMobile ? 0.15 : 0.35);
+    setZoomLevel(isMobile ? 0.20 : 0.35);
   };
 
   const handleClickOutside = (e: MouseEvent) => {
