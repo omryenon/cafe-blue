@@ -18,12 +18,23 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <img src={logo}></img>
-      <div className={isMobile ? "mobile-header-title" : "header-title"}>
-        <p>Nestled within the vibrant Jaffa Port, </p> 
-        <p>Café Blue is a cozy spot for locals and visitors. With specialty</p>
-        <p>and delicious pastries, every detail is crafted to perfection.</p>
-        <p>Oh... and the coffee? Simply exceptional!</p>
-      </div>
+      {!isMobile && (
+        <div className="header-title">
+          <p>Nestled within the vibrant Jaffa Port, </p> 
+          <p>Café Blue is a cozy spot for locals and visitors. With specialty</p>
+          <p>and delicious pastries, every detail is crafted to perfection.</p>
+          <p>Oh... and the coffee? Simply exceptional!</p>
+        </div>
+      )}
+      {isMobile && (
+        <div className="mobile-header-title">
+          <p>Nestled within the vibrant Jaffa Port, </p> 
+          <p>Café Blue is a cozy spot for locals and visitors.</p>
+          <p>With specialty and delicious pastries, every detail is</p>
+          <p>crafted to perfection.Oh... and the coffee?</p>
+          <p>Simply exceptional!</p>
+        </div>
+      )}
     </header>
   );
 };
