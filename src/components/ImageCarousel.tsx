@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./ImageCarousel.scss";
 import { gsap } from "gsap";
+import { DeviceContext } from "../App";
 
 // Import your images
 import image1 from "../assets/open-cafe-blue-1.jpg";
@@ -30,13 +31,15 @@ const images = [
 ];
 
 const ImageCarousel: React.FC = () => {
+
+  const { isMobile } = useContext(DeviceContext);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
 
     if (container) {
-      const singleImageWidth = 220; // Image width in pixels
+      const singleImageWidth = isMobile ? 160 : 220; // Image width in pixels
       const gap = 50; // Gap between images
       const numImages = images.length;
       const totalWidth = (singleImageWidth + gap) * numImages;
@@ -62,7 +65,7 @@ const ImageCarousel: React.FC = () => {
             key={index}
             src={img}
             alt={`Image ${index + 1}`}
-            className="image"
+            className={isMobile ? "mobile-image" : "image"}
           />
         ))}
       </div>

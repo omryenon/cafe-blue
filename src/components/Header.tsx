@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className="header" style={{paddingBottom: isMobile ? '15px' : '30px'}}>
       <img src={logo}></img>
       {!isMobile && (
         <div className="header-title">

@@ -16,3 +16,10 @@
   height: 280px;  /* Image height */
   margin-right: 50px; /* Gap between images */
 }
+
+.mobile-image {
+  flex-shrink: 0;
+  width: 160px;   /* Image width */
+  height: 180px;  /* Image height */
+  margin-right: 50px; /* Gap between images */
+}
