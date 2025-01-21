@@ -9,6 +9,11 @@
   border-radius: 10px;
   overflow: hidden;
 }
+.mobile-map-container {
+  @extend .map-container;
+  height: 400px;
+  width: 400px;
+}
 iframe {
   border-radius: 10px;
 }

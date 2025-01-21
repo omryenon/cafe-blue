@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Map.scss';
 import img from "../assets/map.jpg";
+import { DeviceContext } from "../App";
 
 const Map: React.FC = () => {
+
+  const { isMobile } = useContext(DeviceContext);
 
   const [mapFailed, setMapFailed] = useState(false);
 
@@ -13,7 +16,7 @@ const Map: React.FC = () => {
   return (
     <>
       <div className="address">Jaffa port 3, Tel Aviv-Yafo</div>
-      <div className="map-container" style={{height: mapFailed ? 'unset' : '500px'}}>
+      <div className={isMobile ? "mobile-map-container" : "map-container"} style={{height: mapFailed ? 'unset' : isMobile ? '400px' : '500px'}}>
         {mapFailed ? (
           <img
             src={img}
@@ -23,8 +26,8 @@ const Map: React.FC = () => {
         ) : (
         <iframe
           src={cafeBlueLocation}
-          width="500"
-          height="500"
+          width={isMobile ? "400px" : "500px"}
+          height={isMobile ? "400px" : "500px"}
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"
