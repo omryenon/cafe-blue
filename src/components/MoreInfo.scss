@@ -7,17 +7,56 @@
   }
   
   .hours div {
-    font-size: 20px; /* Similar text size */
     padding: 5px 0;
     // border-bottom: 1px solid #ddd;
   }
   
-  .hours div:last-child {
+  .hours span:last-child {
     border-bottom: none;
   }
 
 .mobile-more-info {
   @extend .more-info;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  @media (max-width: 410px) {
+    font-size: 18.5px;
+  }
+  @media (max-width: 400px) {
+    font-size: 18px;
+  }
+  @media (max-width: 390px) {
+    font-size: 17.5px;
+  }
+  @media (max-width: 380px) {
+    font-size: 17px;
+  }
+  @media (max-width: 370px) {
+    font-size: 16.5px;
+  }
+  @media (max-width: 360px) {
+    font-size: 16px;
+  }
+}
+
+.mobile-hours {
+  @extend .hours; 
+  @media (max-width: 410px) {
+    font-size: 18.5px;
+  }
+  @media (max-width: 400px) {
+    font-size: 18px;
+  }
+  @media (max-width: 390px) {
+    font-size: 17.5px;
+  }
+  @media (max-width: 380px) {
+    font-size: 17px;
+  }
+  @media (max-width: 370px) {
+    font-size: 16.5px;
+  }
+  @media (max-width: 360px) {
+    font-size: 16px;
+  }
 }
   
