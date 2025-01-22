@@ -5,7 +5,7 @@ import { DeviceContext } from "../App";
 
 const Map: React.FC = () => {
 
-  const { isMobile } = useContext(DeviceContext);
+  const { isMobile, lan } = useContext(DeviceContext);
 
   const [mapFailed, setMapFailed] = useState(false);
 
@@ -15,7 +15,7 @@ const Map: React.FC = () => {
 
   return (
     <>
-      <div className={isMobile ? "mobile-address" : "address"}>Jaffa port 3, Tel Aviv-Yafo</div>
+      <div className={isMobile ? "mobile-address" : "address"}>{lan ? 'רחוב נמל יפו 3, תל אביב-יפו' : 'Jaffa port 3, Tel Aviv-Yafo'}</div>
       <div className={isMobile ? "mobile-map-container" : "map-container"} style={{height: mapFailed ? 'unset' : isMobile ? '350px' : '500px'}}>
         {mapFailed ? (
           <img

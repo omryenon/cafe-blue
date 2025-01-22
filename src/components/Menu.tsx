@@ -6,7 +6,7 @@ import { DeviceContext } from "../App";
 
 
 const Menu: React.FC = () => {
-  const { isMobile } = useContext(DeviceContext);
+  const { isMobile, lan } = useContext(DeviceContext);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.20 : 0.35);
@@ -53,7 +53,7 @@ const Menu: React.FC = () => {
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
       <button className="menu-button" onClick={handleMenuClick}>
-        Menu
+        {lan ? 'תפריט' : 'Menu'}
       </button>
 
       {isMenuOpen && (
