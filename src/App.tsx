@@ -36,17 +36,19 @@ const App: React.FC = () => {
   
   return (
     <DeviceContext.Provider value={ {isMobile, lan}}>
-      <LanguageSwitcher setLan= {setLan}/>
-      <AboutUs />
-      <Header />
-      <ImageCarousel />
-      <MoreInfo />
-      <Menu />
-      <Phone />
-      <Map />
-      {/* <Renovation /> */}
-      {/* <CoffeeInfo /> */}
-      {/* <Footer /> */}
+      <div className='app'>
+        <LanguageSwitcher setLan= {setLan}/>
+        <AboutUs />
+        <Header />
+        <ImageCarousel />
+        <MoreInfo />
+        <Menu />
+        <Phone />
+        <Map />
+        {/* <Renovation /> */}
+        {/* <CoffeeInfo /> */}
+        {/* <Footer /> */}
+      </div>
     </DeviceContext.Provider>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import gsap from "gsap";
 import "./Header.scss";
-import logo from "../assets/logo-elipse.png";
+import logo from "../assets/wow.png";
 import { DeviceContext } from "../App";
 
 const Header: React.FC = () => {
@@ -17,14 +17,14 @@ const Header: React.FC = () => {
 
   return (
     <header className="header" style={{paddingBottom: isMobile ? '15px' : '30px'}}>
-      <img src={logo}></img>
+      <img src={logo} style={{margin: '40px', transform: isMobile ? 'scale(0.85)' : 'scale(1)'}}></img>
       {!isMobile && (
         <div className="header-title">
           {!lan && (
             <>
               <p>Nestled within the vibrant Jaffa Port, </p> 
-              <p>Café Blue is a cozy spot for locals and visitors. With specialty</p>
-              <p>and delicious pastries, every detail is crafted to perfection.</p>
+              <p>Café Blue is a cozy spot for locals and visitors. With special</p>
+              <p>delicious pastries, every detail is crafted to perfection.</p>
               <p>Oh... and the coffee? Simply exceptional!</p>
             </>
           )}
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             <>
               <p>Nestled within the vibrant Jaffa Port, </p> 
               <p>Café Blue is a cozy spot for locals and visitors.</p>
-              <p>With specialty and delicious pastries, every detail</p>
+              <p>With special delicious pastries, every detail</p>
               <p>is crafted to perfection. Oh... and the coffee?</p>
               <p>Simply exceptional!</p>
             </>
