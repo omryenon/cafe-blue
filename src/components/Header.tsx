@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         </div>
       )}
       {isMobile && (
-        <div className="mobile-header-title">
+        <div className={lan ? "heb-mobile-header-title" : "mobile-header-title"}>
           {!lan && (
             <>
               <p>Nestled within the vibrant Jaffa Port, </p> 
