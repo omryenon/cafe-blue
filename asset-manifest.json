@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cafe-blue/static/css/main.bd8b7001.css",
-    "main.js": "/cafe-blue/static/js/main.a2696a93.js",
+    "main.css": "/cafe-blue/static/css/main.b273f1a2.css",
+    "main.js": "/cafe-blue/static/js/main.ffe4a57f.js",
     "static/media/open-cafe-blue-5.jpg": "/cafe-blue/static/media/open-cafe-blue-5.de5153a334adcd8181be.jpg",
     "static/media/open-cafe-blue-11.jpg": "/cafe-blue/static/media/open-cafe-blue-11.2c81fbbc94ea239d8245.jpg",
     "static/media/menu.jpg": "/cafe-blue/static/media/menu.838b28cdc88a2d18a95a.jpg",
@@ -16,14 +16,16 @@
     "static/media/map.jpg": "/cafe-blue/static/media/map.c7310c9080f75338dc0c.jpg",
     "static/media/open-cafe-blue-4.jpg": "/cafe-blue/static/media/open-cafe-blue-4.24a41f4be5c744a143bb.jpg",
     "static/media/logo-elipse.png": "/cafe-blue/static/media/logo-elipse.44170f37a0f649c3e0d7.png",
+    "static/media/USAFlag.svg": "/cafe-blue/static/media/USAFlag.02012f9abbf809d3bc9d0083d2573ba5.svg",
+    "static/media/ISRFlag.svg": "/cafe-blue/static/media/ISRFlag.686ed79d95af02704b9b7ed20d917bb1.svg",
     "index.html": "/cafe-blue/index.html",
     "static/media/instgram.svg": "/cafe-blue/static/media/instgram.4af1a43c34d843abc74ee2e328c657b0.svg",
     "static/media/facebook.svg": "/cafe-blue/static/media/facebook.98041716237ba4e82906ca5ee1d06485.svg",
-    "main.bd8b7001.css.map": "/cafe-blue/static/css/main.bd8b7001.css.map",
-    "main.a2696a93.js.map": "/cafe-blue/static/js/main.a2696a93.js.map"
+    "main.b273f1a2.css.map": "/cafe-blue/static/css/main.b273f1a2.css.map",
+    "main.ffe4a57f.js.map": "/cafe-blue/static/js/main.ffe4a57f.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd8b7001.css",
-    "static/js/main.a2696a93.js"
+    "static/css/main.b273f1a2.css",
+    "static/js/main.ffe4a57f.js"
   ]
 }
