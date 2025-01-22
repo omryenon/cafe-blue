@@ -9,16 +9,21 @@ import MoreInfo from "./components/MoreInfo";
 import Menu from "./components/Menu";
 import Phone from "./components/Phone";
 import Map from "./components/Map";
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 import "./App.scss";
 
-export const DeviceContext = createContext({ isMobile: false });
+export const DeviceContext = createContext({
+  isMobile: false,
+  lan: false 
+});
 const detectMobile = () => {
   return window.innerWidth <= 768;
 };
 
 const App: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(detectMobile());
+  const [isMobile, setIsMobile] = useState<boolean>(detectMobile());
+  const [lan, setLan] = useState<boolean>(false);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(detectMobile());
@@ -30,7 +35,8 @@ const App: React.FC = () => {
   }, []);
   
   return (
-    <DeviceContext.Provider value={ {isMobile}}>
+    <DeviceContext.Provider value={ {isMobile, lan}}>
+      <LanguageSwitcher setLan= {setLan}/>
       <AboutUs />
       <Header />
       <ImageCarousel />
