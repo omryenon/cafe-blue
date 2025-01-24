@@ -67,6 +67,7 @@ const ImageCarousel: React.FC = () => {
             src={img}
             alt={`Image ${index + 1}`}
             className={isMobile ? "mobile-image" : "image"}
+            loading="lazy"
           />
         ))}
       </div>
