@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import "./ImageCarousel.scss";
 import { gsap } from "gsap";
 import { DeviceContext } from "../App";
@@ -34,41 +34,61 @@ const ImageCarousel: React.FC = () => {
 
   const { isMobile } = useContext(DeviceContext);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    const container = containerRef.current;
-
-    if (container) {
-      const singleImageWidth = isMobile ? 180 : 220; // Image width in pixels
-      const gap = 50; // Gap between images
-      const numImages = images.length;
-      const totalWidth = (singleImageWidth + gap) * numImages;
-
-      // GSAP infinite scrolling
-      gsap.to(container, {
-        x: `-=${totalWidth}px`, // Move left by total width
-        duration: 60, // Adjust speed as needed
-        ease: "linear",
-        repeat: -1, // Infinite loop
-        modifiers: {
-          x: (x) => `${parseFloat(x) % totalWidth}px`, // Reset x position seamlessly
-        },
+    const loadImages = async () => {
+      const promises = images.map((src) => {
+        return new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = () => resolve();
+          img.onerror = () => resolve(); // Handle failed loads gracefully
+        });
       });
-    }
-  }, []);
+
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
+    loadImages();
+  }, [])
+
+  useEffect(() => {
+    if (!imagesLoaded || !containerRef.current) return;
+    const container = containerRef.current;
+    const singleImageWidth = isMobile ? 180 : 220; // Image width in pixels
+    const gap = 50; // Gap between images
+    const numImages = images.length;
+    const totalWidth = (singleImageWidth + gap) * numImages;
+
+    // GSAP infinite scrolling
+    gsap.to(container, {
+      x: `-=${totalWidth}px`, // Move left by total width
+      duration: 60, // Adjust speed as needed
+      ease: "linear",
+      repeat: -1, // Infinite loop
+      modifiers: {
+        x: (x) => `${parseFloat(x) % totalWidth}px`, // Reset x position seamlessly
+      },
+    });
+  }, [imagesLoaded, isMobile]);
 
   return (
     <div className="image-carousel">
-      <div className="image-container" ref={containerRef}>
-        {images.concat(images).map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Image ${index + 1}`}
-            className={isMobile ? "mobile-image" : "image"}
-          />
-        ))}
-      </div>
+      {!imagesLoaded ? (
+        <div className="loading-message"></div>
+      ) : (
+        <div className="image-container" ref={containerRef}>
+          {images.concat(images).map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Image ${index + 1}`}
+              className={isMobile ? "mobile-image" : "image"}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
