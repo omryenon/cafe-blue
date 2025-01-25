@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cafe-blue/static/css/main.3a0238f0.css",
-    "main.js": "/cafe-blue/static/js/main.27b739fc.js",
+    "main.css": "/cafe-blue/static/css/main.6be19443.css",
+    "main.js": "/cafe-blue/static/js/main.701d3cca.js",
     "static/media/open-cafe-blue-5.jpg": "/cafe-blue/static/media/open-cafe-blue-5.de5153a334adcd8181be.jpg",
     "static/media/open-cafe-blue-11.jpg": "/cafe-blue/static/media/open-cafe-blue-11.2c81fbbc94ea239d8245.jpg",
     "static/media/open-cafe-blue-10.jpg": "/cafe-blue/static/media/open-cafe-blue-10.c9687120f498446a7ecd.jpg",
     "static/media/open-cafe-blue-8.jpg": "/cafe-blue/static/media/open-cafe-blue-8.ffffa9f2c6a5bcc38a70.jpg",
     "static/media/open-cafe-blue-7.jpg": "/cafe-blue/static/media/open-cafe-blue-7.3883e33c2f4062a46f44.jpg",
     "static/media/open-cafe-blue-9.jpg": "/cafe-blue/static/media/open-cafe-blue-9.4976a525851e8888c9a5.jpg",
-    "static/media/image.png": "/cafe-blue/static/media/image.7374a4a1f8da55af07da.png",
+    "static/media/menu.png": "/cafe-blue/static/media/menu.7374a4a1f8da55af07da.png",
     "static/media/open-cafe-blue-6.jpg": "/cafe-blue/static/media/open-cafe-blue-6.996981600e06ca101de6.jpg",
     "static/media/open-cafe-blue-2.jpg": "/cafe-blue/static/media/open-cafe-blue-2.0ab6bcd5d13f4303dd9a.jpg",
     "static/media/open-cafe-blue-1.jpg": "/cafe-blue/static/media/open-cafe-blue-1.aa9007d34ef99fbac52e.jpg",
@@ -22,11 +22,11 @@
     "index.html": "/cafe-blue/index.html",
     "static/media/instgram.svg": "/cafe-blue/static/media/instgram.4af1a43c34d843abc74ee2e328c657b0.svg",
     "static/media/facebook.svg": "/cafe-blue/static/media/facebook.98041716237ba4e82906ca5ee1d06485.svg",
-    "main.3a0238f0.css.map": "/cafe-blue/static/css/main.3a0238f0.css.map",
-    "main.27b739fc.js.map": "/cafe-blue/static/js/main.27b739fc.js.map"
+    "main.6be19443.css.map": "/cafe-blue/static/css/main.6be19443.css.map",
+    "main.701d3cca.js.map": "/cafe-blue/static/js/main.701d3cca.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a0238f0.css",
-    "static/js/main.27b739fc.js"
+    "static/css/main.6be19443.css",
+    "static/js/main.701d3cca.js"
   ]
 }
