@@ -44,9 +44,7 @@
   }
   
   .zoom-controls {
-    position: absolute;
-    top: 0px;
-    right: 200px;
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 10px;

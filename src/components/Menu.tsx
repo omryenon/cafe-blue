@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
 import "./Menu.scss";
-import menu from "../assets/menu.jpg";
+// import menu from "../assets/menu.jpg";
+import menu from "../assets/menu.png";
 import { DeviceContext } from "../App";
 
 
@@ -9,7 +10,7 @@ const Menu: React.FC = () => {
   const { isMobile, lan } = useContext(DeviceContext);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.20 : 0.35);
+  const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.95 : 1.20);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -22,18 +23,18 @@ const Menu: React.FC = () => {
 
   // Zoom in
   const handleZoomIn = () => {
-    setZoomLevel((prevZoom) => Math.min(prevZoom + 0.05, isMobile ? 0.3 : 0.5)); // Limit zoom to 2x
+    setZoomLevel((prevZoom) => Math.min(prevZoom + 0.05, isMobile ? 1.1 : 1.35)); // Limit zoom to 2x
   };
 
   // Zoom out
   const handleZoomOut = () => {
-    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.05, isMobile ? 0.10 : 0.25)); // Limit zoom to 0.5x
+    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.05, isMobile ? 0.8 : 1.05)); // Limit zoom to 0.5x
   };
 
   // Close the menu
   const handleClose = () => {
     setIsMenuOpen(false);
-    setZoomLevel(isMobile ? 0.20 : 0.35);
+    setZoomLevel(isMobile ? 0.95 : 1.20);
   };
 
   const handleClickOutside = (e: MouseEvent) => {
@@ -67,7 +68,9 @@ const Menu: React.FC = () => {
               style={{ transform: `scale(${zoomLevel})` }}
             />
             {imageLoaded && (
-              <div className="zoom-controls" style={{right: isMobile ? '0px' : '200px'}}>
+              <div className="zoom-controls"
+                style={{right: isMobile ? '20px' : '50px', top: isMobile ? '20px' : '50px'}}
+              >
               <button className="close-button" onClick={handleClose}>
                   X
                 </button>
