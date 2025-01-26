@@ -13,12 +13,12 @@ const Menu: React.FC = () => {
   const [zoomLevel, setZoomLevel] = useState(isMobile ? 0.95 : 1.20);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Open or close the menu on button click
   const handleMenuClick = () => {
-    setIsMenuOpen((prevState) => !prevState);
-    setImageLoaded(false);
+    setIsMenuOpen(true);
+    setIsLoading(true);
   };
 
   // Zoom in
@@ -43,10 +43,18 @@ const Menu: React.FC = () => {
     }
   };
 
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      handleClose();
+    }
+  };
+
   // Add event listener for clicks outside
   useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
+      document.addEventListener("keydown", handleKeyDown);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -59,30 +67,31 @@ const Menu: React.FC = () => {
 
       {isMenuOpen && (
         <div className="menu-overlay" ref={overlayRef}>
+          {isLoading && <div className="spinner"></div>}
           <div className="menu-content">
             <img
               src={menu}
               alt="Menu"
               className="menu-image"
-              onLoad={() => setImageLoaded(true)}
+              onLoad={() =>  {
+                setIsLoading(false);
+              }}
               style={{ transform: `scale(${zoomLevel})` }}
             />
-            {imageLoaded && (
-              <div className="zoom-controls"
-                style={{right: isMobile ? '20px' : '50px', top: isMobile ? '20px' : '50px'}}
-              >
-              <button className="close-button" onClick={handleClose}>
-                  X
-                </button>
-                <button className="zoom-button" onClick={handleZoomOut}>
-                  -
-                </button>
-                <button className="zoom-button" onClick={handleZoomIn}>
-                  +
-                </button>
-                
-              </div>
-            )}
+            <div className="zoom-controls"
+              style={{right: isMobile ? '20px' : '50px', top: isMobile ? '20px' : '50px'}}
+            >
+            <button className="close-button" onClick={handleClose}>
+                X
+              </button>
+              <button className="zoom-button" onClick={handleZoomOut}>
+                -
+              </button>
+              <button className="zoom-button" onClick={handleZoomIn}>
+                +
+              </button>
+              
+            </div>
           </div>
         </div>
       )}
