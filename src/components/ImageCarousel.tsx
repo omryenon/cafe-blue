@@ -14,7 +14,6 @@ import image7 from "../assets/open-cafe-blue-7.jpg";
 import image8 from "../assets/open-cafe-blue-8.jpg";
 import image9 from "../assets/open-cafe-blue-9.jpg";
 import image10 from "../assets/open-cafe-blue-10.jpg";
-import image11 from "../assets/open-cafe-blue-11.jpg";
 
 const images = [
   image1,
@@ -27,7 +26,6 @@ const images = [
   image8,
   image9,
   image10,
-  image11,
 ];
 
 const ImageCarousel: React.FC = () => {
