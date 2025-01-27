@@ -16,7 +16,7 @@ const MoreInfo: React.FC = () => {
             <div>Friday: 08:00 - 16:00</div>
             <div>Saturday: 08:00 - 18:00</div>
             <div style={{marginTop: '10px'}}>🕒 Opening hours may vary depending </div>
-            <div>on events at Beit HaMekholot complex</div>
+            <div>on events at Beit Hamecholot complex</div>
           </>
         )}
         {lan && (
