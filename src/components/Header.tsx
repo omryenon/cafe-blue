@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import gsap from "gsap";
 import "./Header.scss";
-import logo from "../assets/wow.png";
+import logo from "../assets/logo.png";
 import { DeviceContext } from "../App";
 
 const Header: React.FC = () => {
@@ -17,7 +17,9 @@ const Header: React.FC = () => {
 
   return (
     <header className="header" style={{paddingBottom: isMobile ? '15px' : '30px'}}>
-      <img src={logo} style={{margin: '40px', transform: isMobile ? 'scale(0.85)' : 'scale(1)'}}></img>
+      <div style={{display: 'flex', alignContent: 'center', justifyContent: 'center'}}>
+        <img src={logo} style={{transform: isMobile ? 'scale(0.35)' : 'scale(0.5)', marginTop: isMobile ? '-20px' : '0px'}}></img>
+      </div>
       {!isMobile && (
         <div className="header-title">
           {!lan && (
