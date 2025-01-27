@@ -15,6 +15,8 @@ const MoreInfo: React.FC = () => {
             <div>Thursday: 08:00 - 22:00</div>
             <div>Friday: 08:00 - 16:00</div>
             <div>Saturday: 08:00 - 18:00</div>
+            <div style={{marginTop: '10px'}}>🕒 Opening hours may vary depending </div>
+            <div>on events at Beit HaMekholot complex</div>
           </>
         )}
         {lan && (
@@ -23,6 +25,8 @@ const MoreInfo: React.FC = () => {
             <div>08:00 - 22:00 : חמישי</div>
             <div>08:00 - 16:00 : שישי</div>
             <div>08:00 - 18:00 : שבת</div>
+            <div style={{marginTop: '10px'}}>שעות הפתיחה עשויות להשתנות 🕒</div>
+            <div>בהתאם לאירועים במתחם בית המכולות</div>
           </>
         )}
       </div>
