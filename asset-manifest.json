@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cafe-blue/static/css/main.ee088a41.css",
-    "main.js": "/cafe-blue/static/js/main.1a6d796c.js",
+    "main.css": "/cafe-blue/static/css/main.2b257d41.css",
+    "main.js": "/cafe-blue/static/js/main.823882bc.js",
     "static/media/open-cafe-blue-5.jpg": "/cafe-blue/static/media/open-cafe-blue-5.de5153a334adcd8181be.jpg",
     "static/media/open-cafe-blue-11.jpg": "/cafe-blue/static/media/open-cafe-blue-11.2c81fbbc94ea239d8245.jpg",
     "static/media/open-cafe-blue-10.jpg": "/cafe-blue/static/media/open-cafe-blue-10.c9687120f498446a7ecd.jpg",
@@ -16,17 +16,17 @@
     "static/media/map.jpg": "/cafe-blue/static/media/map.c7310c9080f75338dc0c.jpg",
     "static/media/back.jpg": "/cafe-blue/static/media/back.5a5ad4300e820029c2ad.jpg",
     "static/media/open-cafe-blue-4.jpg": "/cafe-blue/static/media/open-cafe-blue-4.24a41f4be5c744a143bb.jpg",
-    "static/media/wow.png": "/cafe-blue/static/media/wow.18835c2eafb3dd2adf50.png",
+    "static/media/logo.png": "/cafe-blue/static/media/logo.17a79d4bde3a172b1fda.png",
     "static/media/USAFlag.svg": "/cafe-blue/static/media/USAFlag.02012f9abbf809d3bc9d0083d2573ba5.svg",
     "static/media/ISRFlag.svg": "/cafe-blue/static/media/ISRFlag.686ed79d95af02704b9b7ed20d917bb1.svg",
     "index.html": "/cafe-blue/index.html",
     "static/media/instgram.svg": "/cafe-blue/static/media/instgram.4af1a43c34d843abc74ee2e328c657b0.svg",
     "static/media/facebook.svg": "/cafe-blue/static/media/facebook.98041716237ba4e82906ca5ee1d06485.svg",
-    "main.ee088a41.css.map": "/cafe-blue/static/css/main.ee088a41.css.map",
-    "main.1a6d796c.js.map": "/cafe-blue/static/js/main.1a6d796c.js.map"
+    "main.2b257d41.css.map": "/cafe-blue/static/css/main.2b257d41.css.map",
+    "main.823882bc.js.map": "/cafe-blue/static/js/main.823882bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee088a41.css",
-    "static/js/main.1a6d796c.js"
+    "static/css/main.2b257d41.css",
+    "static/js/main.823882bc.js"
   ]
 }
