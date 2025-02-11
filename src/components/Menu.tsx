@@ -61,7 +61,7 @@ const Menu: React.FC = () => {
 
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
-      <button className="menu-button" onClick={handleMenuClick}>
+      <button className="menu-button" onClick={handleMenuClick}  aria-label={lan ? "פתיחת תפריט" : "open menu"}>
         {lan ? 'תפריט' : 'Menu'}
       </button>
 
@@ -81,13 +81,13 @@ const Menu: React.FC = () => {
             <div className="zoom-controls"
               style={{right: isMobile ? '20px' : '50px', top: isMobile ? '20px' : '50px'}}
             >
-            <button className="close-button" onClick={handleClose}>
+            <button className="close-button" onClick={handleClose}  aria-label={lan ? "סגור תפריט" : "close menu"}>
                 X
               </button>
-              <button className="zoom-button" onClick={handleZoomOut}>
+              <button className="zoom-button" onClick={handleZoomOut} aria-label={lan ? "הקטן תפריט" : "zoom out menu"}>
                 -
               </button>
-              <button className="zoom-button" onClick={handleZoomIn}>
+              <button className="zoom-button" onClick={handleZoomIn} aria-label={lan ? "הגדל תפריט" : "zoom in menu"}>
                 +
               </button>
               

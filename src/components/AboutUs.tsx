@@ -7,7 +7,7 @@ import { DeviceContext } from "../App";
 
 const AboutUs: React.FC = () => {
 
-  const { isMobile } = useContext(DeviceContext);
+  const { isMobile, lan } = useContext(DeviceContext);
   useEffect(() => {
     gsap.fromTo(
       [".about-us", ".mobile-about-us"],
@@ -18,10 +18,10 @@ const AboutUs: React.FC = () => {
 
   return (
     <section className={isMobile ? "mobile-about-us" : "about-us"}>
-    <a href="https://www.instagram.com/cafeblue.jaffa/" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/cafeblue.jaffa/" target="_blank" rel="noopener noreferrer" aria-label={lan ? "עמוד האינסטגרם שלנו" : "our instagram page"}>
       <img src={ins} alt="Instagram" className={isMobile ? "mobile-svg-style" : "svg-style"} />
     </a>
-    <a href="https://www.facebook.com/p/Caf%C3%A9-Blue-61559556535364/?_rdr" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.facebook.com/p/Caf%C3%A9-Blue-61559556535364/?_rdr" target="_blank" rel="noopener noreferrer"  aria-label={lan ? "עמוד הפייסבוק שלנו" : "our facebook page"}>
       <img src={fb} alt="Facebook" className={isMobile ? "mobile-svg-style" : "svg-style"} />
     </a>
     </section>

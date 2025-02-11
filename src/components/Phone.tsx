@@ -5,7 +5,7 @@ import { DeviceContext } from "../App";
 
 const Phone: React.FC = () => {
 
-  const { isMobile } = useContext(DeviceContext);
+  const { isMobile, lan } = useContext(DeviceContext);
   const phoneRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Phone: React.FC = () => {
   return (
     <div style={{display: "flex", justifyContent: "center"}}>
       <div className="phone-container" ref={phoneRef} style={{padding: isMobile ? '12px' : '20px'}}>
-        <a href="tel:+972545742762" className="phone-number" style={{fontSize: isMobile ? '16px' : '24px'}}>
+        <a href="tel:+972545742762" className="phone-number" style={{fontSize: isMobile ? '16px' : '24px'}} aria-label={lan ? "חייג אלינו" : "call us"}>
           📞 +972 54-574-2762
         </a>
       </div>

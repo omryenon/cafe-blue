@@ -31,7 +31,7 @@ const Map: React.FC = () => {
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"
-          title="Cafe Blue"
+          title="Cafe Blue location map"
           onError={() => setMapFailed(true)}
         ></iframe>
         )}

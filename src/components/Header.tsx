@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <img alt="logo" src={logo} style={{transform: isMobile ? 'scale(0.35)' : 'scale(0.5)', marginTop: isMobile ? '-20px' : '0px'}}></img>
       </div>
       {!isMobile && (
-        <div className="header-title">
+        <div className="header-title" tabIndex={0} aria-labelledby={lan ? "תיאור המקום" : "place description"}>
           {!lan && (
             <>
               <p>Nestled within the vibrant Jaffa Port, </p> 

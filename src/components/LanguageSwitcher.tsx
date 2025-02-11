@@ -18,7 +18,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ setLan }) => {
   };
 
   return (
-    <button className={isMobile ? "mobile-language-switcher" : "language-switcher"} onClick={toggleLanguage}>
+    <button className={isMobile ? "mobile-language-switcher" : "language-switcher"} onClick={toggleLanguage} aria-label={lan? "שינוי שפה" : "switching language"}>
       <img src={lan ? israelFlag : usFlag} alt="Language" />
     </button>
   );
