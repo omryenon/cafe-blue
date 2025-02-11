@@ -16,7 +16,7 @@ const AboutUs: React.FC = () => {
     );
   }, []);
 
-  return (
+  return ( // #228BE6 previous color
     <section className={isMobile ? "mobile-about-us" : "about-us"}>
     <a href="https://www.instagram.com/cafeblue.jaffa/" target="_blank" rel="noopener noreferrer" aria-label={lan ? "עמוד האינסטגרם שלנו" : "our instagram page"}>
       <img src={ins} alt="Instagram" className={isMobile ? "mobile-svg-style" : "svg-style"} />
