@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   return (
     <header className="header" style={{paddingBottom: isMobile ? '15px' : '30px'}}>
       <div style={{display: 'flex', alignContent: 'center', justifyContent: 'center'}}>
-        <img alt="logo" src={logo} style={{transform: isMobile ? 'scale(0.35)' : 'scale(0.5)', marginTop: isMobile ? '-20px' : '0px'}}></img>
+        <img alt="" src={logo} style={{transform: isMobile ? 'scale(0.35)' : 'scale(0.5)', marginTop: isMobile ? '-20px' : '0px'}}></img>
       </div>
       {!isMobile && (
         <div className="header-title" tabIndex={0}>
