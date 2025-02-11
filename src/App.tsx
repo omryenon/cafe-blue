@@ -24,6 +24,7 @@ const detectMobile = () => {
 const App: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(detectMobile());
   const [lan, setLan] = useState<boolean>(false);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(detectMobile());
@@ -33,6 +34,11 @@ const App: React.FC = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = lan ? "he" : "en";
+    document.documentElement.dir = lan ? "rtl" : "ltr";
+  }, [lan]);
   
   return (
     <DeviceContext.Provider value={ {isMobile, lan}}>
