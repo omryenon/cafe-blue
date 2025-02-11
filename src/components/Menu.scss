@@ -1,7 +1,7 @@
 /* Menu.scss */
 .menu-button {
     display: flex;
-    background-color: #007bff; /* Blue color */
+    background-color: #1e275c; /* Blue color */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -11,7 +11,7 @@
     transition: background-color 0.3s;
   
     &:hover {
-      background-color: #0056b3;
+      border-color: #0d202c;
     }
   }
   
