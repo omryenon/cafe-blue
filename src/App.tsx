@@ -37,7 +37,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     document.documentElement.lang = lan ? "he" : "en";
-    document.documentElement.dir = lan ? "rtl" : "ltr";
   }, [lan]);
   
   return (
